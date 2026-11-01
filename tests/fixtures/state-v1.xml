@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FETLINEPOUNCE look="B" preset="Vocal Pounce" stateVersion="1">
+  <PARAM id="all" value="1.0"/>
+  <PARAM id="attack" value="40.0"/>
+  <PARAM id="bypass" value="0.0"/>
+  <PARAM id="hp" value="1.0"/>
+  <PARAM id="input" value="21.0"/>
+  <PARAM id="meter" value="2.0"/>
+  <PARAM id="mix" value="40.0"/>
+  <PARAM id="output" value="-3.0"/>
+  <PARAM id="ratio" value="3.0"/>
+  <PARAM id="release" value="900.0"/>
+</FETLINEPOUNCE>

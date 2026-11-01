@@ -1,0 +1,649 @@
+{
+ "cheekL": [
+  0,
+  0,
+  52,
+  640
+ ],
+ "cheekR": [
+  1148,
+  0,
+  52,
+  640
+ ],
+ "main": [
+  52,
+  0,
+  1096,
+  640
+ ],
+ "hdr": [
+  52,
+  0,
+  1096,
+  46
+ ],
+ "body": [
+  52,
+  46,
+  1096,
+  568
+ ],
+ "top": [
+  52,
+  46,
+  1004,
+  262
+ ],
+ "ctl": [
+  52,
+  308,
+  1004,
+  84
+ ],
+ "disp": [
+  52,
+  392,
+  1004,
+  138
+ ],
+ "rig": [
+  52,
+  530,
+  1004,
+  84
+ ],
+ "meters": [
+  1056,
+  46,
+  92,
+  568
+ ],
+ "foot": [
+  52,
+  614,
+  1096,
+  26
+ ],
+ "logo": [
+  64,
+  5.5,
+  34,
+  34
+ ],
+ "n1": [
+  106,
+  6,
+  68.31,
+  32
+ ],
+ "n2": [
+  175.31,
+  6,
+  74.42,
+  32
+ ],
+ "s87": [
+  257.73,
+  15.5,
+  59.78,
+  14
+ ],
+ "pPrev": [
+  403.78,
+  10.09,
+  35.34,
+  24.8
+ ],
+ "pName": [
+  443.13,
+  8.91,
+  200,
+  27.19
+ ],
+ "pNext": [
+  647.13,
+  10.09,
+  35.34,
+  24.8
+ ],
+ "pSave": [
+  686.47,
+  10.09,
+  47.08,
+  24.8
+ ],
+ "bBypass": [
+  819.83,
+  10.09,
+  59.36,
+  24.8
+ ],
+ "bGuide": [
+  889.19,
+  10.09,
+  51.8,
+  24.8
+ ],
+ "bSettings": [
+  950.98,
+  10.09,
+  65.81,
+  24.8
+ ],
+ "bAbout": [
+  1026.8,
+  10.09,
+  109.2,
+  24.8
+ ],
+ "vu": [
+  212.39,
+  61.5,
+  380,
+  230
+ ],
+ "cvVU": [
+  216.39,
+  65.5,
+  372,
+  222
+ ],
+ "cvCurve": [
+  62,
+  416,
+  316,
+  104
+ ],
+ "cvHist": [
+  394,
+  416,
+  316,
+  104
+ ],
+ "cvTime": [
+  726,
+  416,
+  316,
+  104
+ ],
+ "cvIn": [
+  1062.5,
+  70,
+  38,
+  300
+ ],
+ "cvOut": [
+  1104.5,
+  70,
+  38,
+  300
+ ],
+ "pkIn": [
+  1066.5,
+  374,
+  33,
+  14
+ ],
+ "pkOut": [
+  1105.5,
+  374,
+  33,
+  14
+ ],
+ "winsz": [
+  1066.73,
+  620.5,
+  69.27,
+  14
+ ],
+ "footText": [
+  64,
+  620.5,
+  230.27,
+  14
+ ],
+ "kHP": [
+  656,
+  341.5,
+  86.09,
+  36
+ ],
+ "mixKnob": [
+  770.09,
+  332.5,
+  56,
+  56
+ ],
+ "mixVal": [
+  836.09,
+  351.5,
+  86.42,
+  16
+ ],
+ "tips": {
+  "brand": "FetlinePounce by Studio 87, a fast limiting amplifier.",
+  "pPrev": "Previous preset.",
+  "pName": "Open the preset browser. Double-click to rename your own preset.",
+  "pNext": "Next preset.",
+  "pSave": "Save these settings as your own preset. Asks before overwriting.",
+  "bBypass": "Bypass: hear the dry signal to compare with the processed sound (B). The meters keep moving.",
+  "bGuide": "Short guide and keyboard shortcuts.",
+  "bSettings": "Info bubbles, power saving, colour look, window size.",
+  "bAbout": "About FetlinePounce, support and where your files live.",
+  "vu": "The needle meter. It shows gain reduction in dB, or the output level, depending on the Meter switch below. The scale is in dB.",
+  "cvCurve": "Level in (across) against level out (up), in dB. The dashed line marks the fixed threshold: turning Input up moves it to the left, so the signal pushes further into it. The dot is the live signal.",
+  "cvHist": "How much the limiter turned the signal down, in dB, over the last six seconds.",
+  "cvTime": "Left: how fast the gain comes down after a loud hit, in milliseconds. Right: how it lets go, in milliseconds. Solid: after a short hit. Dashed: after a long loud passage, when release is slower.",
+  "cvIn": "Input level in dB (peak). Click to clear the clip light.",
+  "cvOut": "Output level in dB (peak). Blue is safe, purple is loud, pink is clipping. Click to clear the clip light.",
+  "pkIn": "Highest input peak, in dB.",
+  "pkOut": "Highest output peak, in dB.",
+  "kHP": "Listen HP: the level detector ignores everything below about 100 Hz, so the bass does not trigger the limiter so hard. The sound itself is not filtered.",
+  "cheek": "Double-click the wood to reset the window to 100%.",
+  "mixKnob": "Blend of the dry signal and the limited signal, for parallel compression. 100% is all limited. Double-click to reset."
+ },
+ "kcells": [
+  {
+   "id": "input",
+   "lab": "Input",
+   "labR": [
+    109.05,
+    89,
+    49.5,
+    20
+   ],
+   "labTip": "How hard the sound is pushed into the limiter. More Input means more squashing and more colour. Try: turn it up until the needle moves 3 to 6 dB on the loud parts, then lift Output to match the level.",
+   "knob": [
+    73.8,
+    111,
+    120,
+    120
+   ],
+   "knobTip": "How hard the sound is pushed into the limiter. More Input means more squashing and more colour. Try: turn it up until the needle moves 3 to 6 dB on the loud parts, then lift Output to match the level.",
+   "ends": [
+    {
+     "t": "LESS",
+     "r": [
+      65.8,
+      231,
+      21.28,
+      15
+     ]
+    },
+    {
+     "t": "MORE",
+     "r": [
+      178.56,
+      231,
+      23.23,
+      15
+     ]
+    }
+   ],
+   "val": [
+    86.98,
+    248,
+    93.63,
+    16
+   ]
+  },
+  {
+   "id": "output",
+   "lab": "Output",
+   "labR": [
+    639.34,
+    89,
+    63.31,
+    20
+   ],
+   "labTip": "The final volume after the limiter. It does not change how much limiting happens. Try: raise it to make up the level lost by squashing, and use Bypass (B) to check it is not just louder.",
+   "knob": [
+    611,
+    111,
+    120,
+    120
+   ],
+   "knobTip": "The final volume after the limiter. It does not change how much limiting happens. Try: raise it to make up the level lost by squashing, and use Bypass (B) to check it is not just louder.",
+   "ends": [
+    {
+     "t": "-20 dB",
+     "r": [
+      603,
+      231,
+      28.72,
+      15
+     ]
+    },
+    {
+     "t": "+20 dB",
+     "r": [
+      709.27,
+      231,
+      29.73,
+      15
+     ]
+    }
+   ],
+   "val": [
+    624.19,
+    248,
+    93.63,
+    16
+   ]
+  },
+  {
+   "id": "attack",
+   "lab": "Attack",
+   "labR": [
+    791.81,
+    89,
+    61.56,
+    20
+   ],
+   "labTip": "How fast the limiter reacts to a loud sound. Clockwise is faster. Try: fast attack grabs the punch of drums and tames peaks; slow attack lets the front of each hit through, so drums keep their snap.",
+   "knob": [
+    762.59,
+    111,
+    120,
+    120
+   ],
+   "knobTip": "How fast the limiter reacts to a loud sound. Clockwise is faster. Try: fast attack grabs the punch of drums and tames peaks; slow attack lets the front of each hit through, so drums keep their snap.",
+   "ends": [
+    {
+     "t": "SLOW 800 \u00b5s",
+     "r": [
+      754.59,
+      231,
+      56.5,
+      15
+     ]
+    },
+    {
+     "t": "FAST 20 \u00b5s",
+     "r": [
+      842.73,
+      231,
+      47.86,
+      15
+     ]
+    }
+   ],
+   "val": [
+    782.98,
+    248,
+    79.22,
+    16
+   ]
+  },
+  {
+   "id": "release",
+   "lab": "Release",
+   "labR": [
+    938.69,
+    89,
+    71.02,
+    20
+   ],
+   "labTip": "How fast the limiter lets go after a loud sound. Clockwise is faster. Try: fast release pumps and sounds lively; slow release is smoother and calmer. It adapts a little: quicker after short hits, slower after long loud parts.",
+   "knob": [
+    914.2,
+    111,
+    120,
+    120
+   ],
+   "knobTip": "How fast the limiter lets go after a loud sound. Clockwise is faster. Try: fast release pumps and sounds lively; slow release is smoother and calmer. It adapts a little: quicker after short hits, slower after long loud parts.",
+   "ends": [
+    {
+     "t": "SLOW 1.1 s",
+     "r": [
+      906.2,
+      231,
+      44.94,
+      15
+     ]
+    },
+    {
+     "t": "FAST 50 ms",
+     "r": [
+      991.86,
+      231,
+      50.34,
+      15
+     ]
+    }
+   ],
+   "val": [
+    930.98,
+    248,
+    86.42,
+    16
+   ]
+  }
+ ],
+ "grps": [
+  {
+   "cap": "Ratio",
+   "capR": [
+    72,
+    321.5,
+    294,
+    14
+   ],
+   "keys": [
+    {
+     "t": "4",
+     "r": [
+      72,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "4 to 1: the gentlest. It evens out a sound. Try it first on vocals and mixes.",
+     "aria": "Ratio 4 to 1"
+    },
+    {
+     "t": "8",
+     "r": [
+      132,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "8 to 1: firmer. Try it on drums and bass.",
+     "aria": "Ratio 8 to 1"
+    },
+    {
+     "t": "12",
+     "r": [
+      192,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "12 to 1: strong, close to limiting. Try it on loud, spiky sounds.",
+     "aria": "Ratio 12 to 1"
+    },
+    {
+     "t": "20",
+     "r": [
+      252,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "20 to 1: limiting. It stops peaks hard. Try it to catch the loudest hits.",
+     "aria": "Ratio 20 to 1"
+    },
+    {
+     "t": "All",
+     "r": [
+      312,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "Every ratio button at once: a harsh, loud, squashed sound with a lot of distortion. Try it on drum rooms or for effect. Click again to go back.",
+     "aria": ""
+    }
+   ]
+  },
+  {
+   "cap": "Meter",
+   "capR": [
+    394,
+    321.5,
+    234,
+    14
+   ],
+   "keys": [
+    {
+     "t": "GR",
+     "r": [
+      394,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "The needle shows how many dB the limiter turns the sound down. Try it while setting Input: 3 to 6 dB is a good start.",
+     "aria": "Meter GR"
+    },
+    {
+     "t": "+8",
+     "r": [
+      454,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "The needle shows the output level, with 0 at a loud reference. Try it to check your level after Output.",
+     "aria": "Meter +8"
+    },
+    {
+     "t": "+4",
+     "r": [
+      514,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "The needle shows the output level, with 0 at a quieter reference. Try it for gentler material.",
+     "aria": "Meter +4"
+    },
+    {
+     "t": "Off",
+     "r": [
+      574,
+      341.5,
+      54,
+      36
+     ],
+     "tip": "The needle is switched off. The sound does not change. Try it to judge by ear only.",
+     "aria": "Meter Off"
+    }
+   ]
+  },
+  {
+   "cap": "Detector",
+   "capR": [
+    656,
+    321.5,
+    86.09,
+    14
+   ],
+   "keys": [
+    {
+     "t": "Listen HP",
+     "r": [
+      656,
+      341.5,
+      86.09,
+      36
+     ],
+     "tip": "Listen HP: the level detector ignores everything below about 100 Hz, so the bass does not trigger the limiter so hard. The sound itself is not filtered.",
+     "aria": ""
+    }
+   ]
+  },
+  {
+   "cap": "Mix",
+   "capR": [
+    770.09,
+    310.5,
+    152.42,
+    14
+   ],
+   "keys": []
+  }
+ ],
+ "mixCap": {
+  "t": "Mix",
+  "r": [
+   770.09,
+   310.5,
+   152.42,
+   14
+  ]
+ },
+ "dcaps": [
+  {
+   "t": "Transfer curve",
+   "r": [
+    62,
+    400,
+    316,
+    14
+   ]
+  },
+  {
+   "t": "Gain reduction, last 6 s",
+   "r": [
+    394,
+    400,
+    316,
+    14
+   ]
+  },
+  {
+   "t": "Attack and release shape",
+   "r": [
+    726,
+    400,
+    316,
+    14
+   ]
+  }
+ ],
+ "mcaps": [
+  {
+   "t": "In",
+   "r": [
+    1062.64,
+    54,
+    11.66,
+    14
+   ]
+  },
+  {
+   "t": "Out",
+   "r": [
+    1100.3,
+    54,
+    21.05,
+    14
+   ]
+  }
+ ],
+ "mcapAll": [
+  1062.64,
+  54,
+  58.7,
+  14
+ ],
+ "ornament": [
+  52,
+  46,
+  1004,
+  262
+ ]
+}

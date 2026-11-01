@@ -1,0 +1,30 @@
+name: Installer check
+
+# Fast check (about 2 minutes) that the Inno Setup script compiles, so script mistakes show up before the long release build.
+on:
+  push:
+    paths: ['packaging/**', 'assets/icon/**', '.github/workflows/installer-check.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: fetlinepounce-installer-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inno:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile the installer script with dummy files
+        env:
+          MSYS2_ARG_CONV_EXCL: "*"
+        run: |
+          mkdir -p stage/vst3/FetlinePounce.vst3/Contents/x86_64-win
+          echo dummy > stage/vst3/FetlinePounce.vst3/Contents/x86_64-win/FetlinePounce.vst3
+          echo dummy > stage/FetlinePounce-manual.pdf
+          choco install innosetup -y --no-progress
+          "/c/Program Files (x86)/Inno Setup 6/ISCC.exe" "//DName=FetlinePounce" "//DProduct=FetlinePounce" "//DVersion=0.0.1" packaging/windows.iss
+          test -s Output/FetlinePounce-Setup.exe

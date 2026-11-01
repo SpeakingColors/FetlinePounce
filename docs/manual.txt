@@ -1,0 +1,26 @@
+## Introduction
+FetlinePounce is a fast limiting amplifier in the spirit of classic FET hardware. It squeezes loud peaks quickly, adds a little colour, and keeps punch. It is made for drums, vocals, bass and buses. It is free and open source.
+
+It is inspired by the idea of that class of unit, not copied from any product; every number in it is our own design choice, written down in Under the hood.
+
+## Quick start
+- Load FetlinePounce on a track or bus.
+- Pick a preset with the arrows, or start with Ratio 4 and the Meter on GR.
+- Turn Input up until the needle shows 3 to 6 dB of gain reduction on the loud parts.
+- Lift Output until the level matches Bypass (press B to compare).
+- Use Mix below 100 percent for parallel compression.
+- Try the Listen HP key if the bass makes the limiter pump.
+
+## Recommendations
+- Vocals: Ratio 4 or 8, slow Attack, medium Release, 3 to 6 dB of reduction.
+- Drums: Ratio 8 or 12, Attack around the middle, fast Release; All buttons for a room sound.
+- Bass: Listen HP on, Ratio 12, short Attack.
+- Buses: Ratio 4, light reduction (1 to 3 dB), Mix 100.
+- Always match the level with Bypass before judging the sound.
+
+## Install
+- Windows: run Setup, it puts the VST3 in the common VST3 folder. Remove it from Settings, Apps. The installer is not signed, so Windows may warn; choose More info, then Run anyway.
+- macOS: open the .pkg. It is not notarized; if macOS blocks it, use System Settings, Privacy and Security, Open Anyway. Remove it with Uninstall FetlinePounce in Applications.
+- Linux Flatpak DAW: install the .flatpak from the linux folder with flatpak install --user, restart the DAW.
+- Linux native DAW: extract the tar.gz into ~/.vst3.
+- Your presets: Windows %APPDATA%\Studio 87\FetlinePounce\presets; macOS ~/Library/Application Support/Studio 87/FetlinePounce/presets; Linux ~/.local/share/Studio 87/FetlinePounce/presets.

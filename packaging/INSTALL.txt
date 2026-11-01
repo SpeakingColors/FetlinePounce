@@ -1,0 +1,42 @@
+FetlinePounce install, remove and use (works fully offline)
+============================================================
+
+What you get: one VST3 plugin, a free open source FET style limiting amplifier by Studio 87.
+
+Windows
+  Run windows\FetlinePounce-Setup.exe. It installs the VST3 plugin for your DAW
+  (C:\Program Files\Common Files\VST3, fixed location, all users) and the manual
+  (C:\Program Files\Studio 87\FetlinePounce, the folder the installer asks about).
+  Windows may show a blue "unknown publisher" screen because the installer is not signed:
+  click "More info", then "Run anyway".
+  Remove: Settings > Apps > FetlinePounce > Uninstall. It asks if you also want your saved presets deleted
+  (default is No, so they stay).
+
+macOS
+  Open macos\FetlinePounce-macOS.pkg. It installs the VST3 plugin, the manual and "Uninstall FetlinePounce".
+  The installer is not notarized: if macOS blocks it, open System Settings > Privacy & Security and choose "Open Anyway".
+  Remove: open "Uninstall FetlinePounce" in the Applications folder. It asks if you also want your saved presets deleted
+  (default is Keep).
+
+Linux, DAW installed as a Flatpak (for example Bitwig, Reaper or Ardour from Flathub)
+  1. Your DAW should use the org.freedesktop.Platform 25.08 runtime (check with: flatpak info <DAW id>, Runtime line).
+  2. Install the file from the linux folder:
+       flatpak install --user linux/FetlinePounce-flatpak-25.08.flatpak
+  3. Restart the DAW and rescan plugins.
+  Remove: flatpak uninstall --user org.freedesktop.LinuxAudio.Plugins.FetlinePounce
+
+Linux, DAW installed natively
+  Extract linux/FetlinePounce-linux-vst3.tar.gz into ~/.vst3  (create the folder if needed), then rescan plugins.
+  Remove: delete the FetlinePounce.vst3 folder from ~/.vst3.
+
+Your saved presets (kept on remove unless you choose to delete them)
+  Windows : %APPDATA%\Studio 87\FetlinePounce\presets
+  macOS   : ~/Library/Application Support/Studio 87/FetlinePounce/presets
+  Linux   : ~/.local/share/Studio 87/FetlinePounce/presets  (a Flatpak DAW keeps its own copy under ~/.var/app/<DAW id>/data/)
+  To delete them yourself, remove the Studio 87/FetlinePounce folder at that place.
+
+Test build: these installers are built by GitHub Actions and have not been tried on real machines yet.
+
+Manual: FetlinePounce-manual.pdf (every control, the interface tour and the numbers behind the sound).
+Checksums: SHA256SUMS.
+Licence: AGPL-3.0-or-later (see LICENSE). Free to use, copy and change.
