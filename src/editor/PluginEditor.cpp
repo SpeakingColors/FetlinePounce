@@ -351,7 +351,7 @@ private:
     // Pause: nothing is redrawn while the window is hidden or minimised (audio and automation keep running).
     void timerCallback() override
     {
-        if (! isShowing()) { lastTick = Time::getMillisecondCounterHiRes(); return; }
+        if (! fpForceShowing && ! isShowing()) { lastTick = Time::getMillisecondCounterHiRes(); return; }
         const double now = Time::getMillisecondCounterHiRes();
         const float dt = (float) jlimit (0.001, 0.1, (now - lastTick) / 1000.0);
         lastTick = now;

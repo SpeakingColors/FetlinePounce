@@ -110,7 +110,7 @@ int main (int argc, char** argv)
     std::unique_ptr<juce::AudioProcessorEditor> ed (proc.createEditor());
     const double sc = argc > 2 ? juce::String (argv[2]).getDoubleValue() : 1.0;
     ed->setSize (juce::roundToInt (1200 * sc), juce::roundToInt (556 * sc));
-    ed->addToDesktop (0);   // the editor only redraws while it is showing (it pauses when hidden)
+    fpForceShowing = true;   // the editor pauses when hidden; offscreen there is no real window
     ed->setVisible (true);
     const juce::String dialog = argc > 4 ? juce::String (argv[4]) : juce::String ("none");
     const int frames = argc > 5 ? juce::String (argv[5]).getIntValue() : 30;
