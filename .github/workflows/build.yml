@@ -60,16 +60,17 @@ jobs:
         run: xvfb-run -a build-snap/FetlineSnapshot_artefacts/Release/FetlineSnapshot --selftest tests/fixtures/state-v1.xml
       - name: Render the real window
         run: |
+          set +e
           mkdir -p shots
           S=build-snap/FetlineSnapshot_artefacts/Release/FetlineSnapshot
-          xvfb-run -a $S shots/look-C.png 1.0 C none 366 > render.log 2>&1; rc=$?
-          echo "exit code $rc" >> render.log
-          if [ $rc -ne 0 ] || [ ! -s shots/look-C.png ]; then tail -n 8 render.log | while IFS= read -r l; do echo "::error::${l:0:300}"; done; exit 1; fi
-          for a in "look-A.png 1.0 A none 366" "look-B.png 1.0 B none 366" "small.png 0.5 C none 60"; do
-            set -- $a; xvfb-run -a $S shots/$1 $2 $3 $4 $5 2>&1 | tail -3 || echo "::warning::render $1 failed"
-          done
-          for d in settings guide about presets save export import; do xvfb-run -a $S shots/dialog-$d.png 1.0 C $d 30 2>&1 | tail -3 || echo "::warning::dialog $d failed"; done
+          r() { out=$1; shift; xvfb-run -a $S "shots/$out" "$@" > "render-$out.log" 2>&1; rc=$?; echo "$out exit $rc" ; if [ $rc -ne 0 ] || [ ! -s "shots/$out" ]; then tail -n 4 "render-$out.log" | while IFS= read -r l; do echo "::warning::$out: ${l:0:250}"; done; fi; }
+          r look-C.png 1.0 C none 366
+          r look-A.png 1.0 A none 366
+          r look-B.png 1.0 B none 366
+          r small.png 0.5 C none 60
+          for d in settings guide about presets save export import; do r dialog-$d.png 1.0 C $d 30; done
           ls -l shots
+          test -s shots/look-C.png || { echo "::error::look-C.png was not rendered"; exit 1; }
       - uses: actions/upload-artifact@v4
         with:
           name: FetlinePounce-editor-snapshots
