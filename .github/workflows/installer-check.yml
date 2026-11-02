@@ -26,5 +26,5 @@ jobs:
           echo dummy > stage/vst3/FetlinePounce.vst3/Contents/x86_64-win/FetlinePounce.vst3
           echo dummy > stage/FetlinePounce-manual.pdf
           choco install innosetup -y --no-progress
-          "/c/Program Files (x86)/Inno Setup 6/ISCC.exe" "//DName=FetlinePounce" "//DProduct=FetlinePounce" "//DVersion=0.0.1" packaging/windows.iss
+          "/c/Program Files (x86)/Inno Setup 6/ISCC.exe" "/DName=FetlinePounce" "/DProduct=FetlinePounce" "/DVersion=0.0.1" packaging/windows.iss
           test -s Output/FetlinePounce-Setup.exe

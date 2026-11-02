@@ -48,7 +48,7 @@ shot = Image.open(os.path.join(ROOT, "docs/screenshot.png")).convert("RGB")
 sc = shot.width / 1200.0
 d = ImageDraw.Draw(shot)
 try:
-    font = ImageFont.truetype(os.path.join(ROOT, "assets/fonts/JetBrainsMono-Bold.ttf"), int(13 * sc))
+    font = ImageFont.truetype(os.path.join(ROOT, "assets/fonts/BarlowCondensed-Bold.ttf"), int(13 * sc))
 except Exception:
     font = ImageFont.load_default()
 

@@ -62,11 +62,12 @@ jobs:
         run: |
           mkdir -p shots
           S=build-snap/FetlineSnapshot_artefacts/Release/FetlineSnapshot
-          xvfb-run -a $S shots/look-C.png 1.0 C none 366
-          xvfb-run -a $S shots/look-A.png 1.0 A none 366
-          xvfb-run -a $S shots/look-B.png 1.0 B none 366
-          xvfb-run -a $S shots/small.png 0.5 C none 60
-          for d in settings guide about presets save export import; do xvfb-run -a $S shots/dialog-$d.png 1.0 C $d 30; done
+          xvfb-run -a $S shots/look-C.png 1.0 C none 366 2>&1 | tail -5; test -s shots/look-C.png
+          for a in "look-A.png 1.0 A none 366" "look-B.png 1.0 B none 366" "small.png 0.5 C none 60"; do
+            set -- $a; xvfb-run -a $S shots/$1 $2 $3 $4 $5 2>&1 | tail -3 || echo "::warning::render $1 failed"
+          done
+          for d in settings guide about presets save export import; do xvfb-run -a $S shots/dialog-$d.png 1.0 C $d 30 2>&1 | tail -3 || echo "::warning::dialog $d failed"; done
+          ls -l shots
       - uses: actions/upload-artifact@v4
         with:
           name: FetlinePounce-editor-snapshots
