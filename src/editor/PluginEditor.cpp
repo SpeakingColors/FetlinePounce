@@ -282,8 +282,8 @@ public:
         {
             drawText (g, String (c.label).toUpperCase(), rc (c.labelR), F (theme::FontKind::bold, 16.0f), t.title, Justification::centred, 3.0f);
             const auto ef = F (theme::FontKind::bold, 11.0f);
-            drawText (g, c.end0, rc (c.end0R), ef, t.title, Justification::centredLeft, 0.5f);
-            drawText (g, c.end1, rc (c.end1R), ef, t.accent, Justification::centredRight, 0.5f);
+            drawText (g, String::fromUTF8 (c.end0), rc (c.end0R), ef, t.title, Justification::centredLeft, 0.5f);
+            drawText (g, String::fromUTF8 (c.end1), rc (c.end1R), ef, t.accent, Justification::centredRight, 0.5f);
         }
         // control row
         g.setColour (t.line); g.fillRect (layout::ctl.x, layout::ctl.y + layout::ctl.h - 1.0f, layout::ctl.w, 1.0f);
@@ -392,7 +392,7 @@ private:
         live.all = real (ids::all) > 0.5f; live.hp = real (ids::hp) > 0.5f; live.bypass = real (ids::bypass) > 0.5f;
     }
 
-    String dot() const { return String::fromUTF8 (" \xc2\xb7 "); }
+    String dot() const { return String::fromUTF8 ("\xc2\xb7 "); }
 
     void syncControls()
     {

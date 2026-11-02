@@ -83,8 +83,8 @@ jobs:
           cp -r shots "$RUNNER_TEMP/shots"
           git checkout --orphan snapshots
           git rm -rf . >/dev/null 2>&1 || true
-          cp -r "$RUNNER_TEMP/shots/." .
-          git add -A
+          cp "$RUNNER_TEMP/shots/"*.png .
+          git add -- *.png
           git commit -m "Editor snapshots from the real compiled window (${GITHUB_SHA::7})"
           git push --force origin snapshots
 
