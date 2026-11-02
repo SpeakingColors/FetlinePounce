@@ -35,6 +35,7 @@ rngs = {"input": "0 to +30 dB; default +4.5 dB", "output": "-20 to +20 dB; defau
 for c in L["kcells"]:
     add(c["lab"], c["knob"], c["knobTip"], rngs.get(c["id"], ""))
 for g in L["grps"]:
+    if g["cap"] not in ("Ratio", "Meter"): continue
     for k in g["keys"]:
         add(g["cap"] + " " + k["t"], k["r"], k["tip"], "Ratio: 4:1, 8:1, 12:1, 20:1, or all four (a special mode)" if g["cap"] == "Ratio" else "Meter: GR, +8, +4, Off")
 add("Listen HP", L["kHP"], T["kHP"], "Off / On; detector high-pass about 100 Hz")
