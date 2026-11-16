@@ -25,9 +25,6 @@ The installers are not code signed, so Windows (SmartScreen) and macOS (Gatekeep
 ## Build
 `sh tests/run.sh` runs the core tests. The plugin builds with CMake and JUCE (fetched automatically): `cmake -S . -B build && cmake --build build`.
 
-## Privacy
-Collects nothing. No network access.
-
 ## Support
 <p align="center">
   <a href="https://ko-fi.com/studio87"><img src="https://img.shields.io/badge/Support_Studio_87-on_Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white" alt="Support Studio 87 on Ko-fi"></a>
